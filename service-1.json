@@ -1,0 +1,16 @@
+{
+  "service": {
+    "name": "service-1",
+    "port": 5001,
+    "connect": {
+      "sidecar_service": {
+        "proxy": {
+          "upstreams": [
+            { "destination_name": "service-2", "local_bind_port": 22002 },
+            { "destination_name": "service-3", "local_bind_port": 22003 }
+          ]
+        }
+      }
+    }
+  }
+}
